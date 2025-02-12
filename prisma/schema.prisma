@@ -15,6 +15,7 @@ datasource db {
 
 model Game {
 	id          		String      @id @default(cuid())
+	gameName     		String
 	packs       		Pack[]
 }
 
