@@ -3,16 +3,16 @@ import { type Request, type Response } from 'express';
 import { route } from '@constants/routeType';
 import { prisma } from '@config/prisma';
 
-export const pack = route.get(
-	'/pack/:packId',
+export const getCard = route.get(
+	'/card/:cardId',
 	async (req: Request, res: Response) => {
-		const { packId } = req.params;
+		const { cardId } = req.params;
 
-		const pack = await prisma.pack.findMany({
+		const card = await prisma.card.findMany({
 			where: {
-				packId
+				cardId
 			}
 		});
-		return res.status(200).json(pack);
+		return res.status(200).json(card);
 	}
 );
