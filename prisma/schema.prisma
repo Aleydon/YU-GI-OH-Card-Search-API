@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Game {
+	id          		String      @id @default(cuid())
+	packs       		Pack[]
+}
+
+model Pack {
+	packId          String      @id @default(cuid())
+	packName        String
+	packImage			 	String?
+	game 						Game[]
+	cards						Card[]
+}
+
+model Card {
+	cardId          String      @id @default(cuid())
+	cardName        String?
+	cardText        String?
+	cardType        String?
+	cardImage       String?
+	packs					 Pack[]
+}
+
+
