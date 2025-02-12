@@ -1,5 +1,5 @@
 {
-	"name": "node-template",
+	"name": "yu-gi-oh-card-search-api",
 	"module": "src/server.ts",
 	"type": "module",
 	"description": "nodejs-template",
