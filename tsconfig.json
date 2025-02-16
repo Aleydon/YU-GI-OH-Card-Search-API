@@ -35,7 +35,7 @@
 		"paths": {
 			"@controllers/*": ["./src/controllers/*"],
 			"@models/*": ["./src/models/*"],
-			"@routes/*": ["./src/routes/*"],
+			"@routes/*": ["src/controllers/*"],
 			"@services/*": ["./src/services/*"],
 			"@utils/*": ["./src/utils/*"],
 			"@constants/*": ["./src/constants/*"],
