@@ -24,7 +24,7 @@ model Pack {
 	packName        String
 	packImage			 	String?
 	game 						Game[]
-	cards						Card[]
+	cards           Card[]
 }
 
 model Card {
@@ -33,7 +33,13 @@ model Card {
 	cardText        String?
 	cardType        String?
 	cardImage       String?
-	packs					 Pack[]
+	cardAttribute  	String?
+	cardAttack      Int?
+	cardDefense     Int?
+	cardLevel       Int?
+	cardRarity      String?
+	pendulumScale   Int?
+	pendulumEffect  String?
+	packs 				  Pack[]
 }
-
 

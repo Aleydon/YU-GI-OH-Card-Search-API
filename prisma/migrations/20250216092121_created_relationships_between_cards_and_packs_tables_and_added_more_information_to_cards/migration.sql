@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "Card" ADD COLUMN "cardAttack" INTEGER;
+ALTER TABLE "Card" ADD COLUMN "cardAttribute" TEXT;
+ALTER TABLE "Card" ADD COLUMN "cardDefense" INTEGER;
+ALTER TABLE "Card" ADD COLUMN "cardLevel" INTEGER;
+ALTER TABLE "Card" ADD COLUMN "cardRarity" TEXT;
