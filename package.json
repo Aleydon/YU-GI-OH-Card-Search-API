@@ -2,18 +2,20 @@
 	"name": "yu-gi-oh-card-search-api",
 	"module": "src/server.ts",
 	"type": "module",
-	"description": "nodejs-template",
+	"description": "Yu-Gi-Oh Tag Force Card Search",
 	"tsup": {
 		"entry": [
 			"src/server.ts"
 		],
+		"format": "esm",
 		"splitting": false,
 		"sourcemap": true,
 		"clean": true
 	},
 	"scripts": {
 		"dev": "tsx watch src/server.ts",
-		"build": "tsup",
+		"build": "tsup src/server.ts --format esm --sourcemap --target node16",
+		"start": "node dist/server.js",
 		"lint": "eslint . --fix --ext .js,.ts",
 		"commit": "eslint . --fix --ext .js,.ts && prettier --write .  && git add .",
 		"prepare": "husky",
